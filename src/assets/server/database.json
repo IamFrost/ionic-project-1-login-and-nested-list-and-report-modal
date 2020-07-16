@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "name": "APPLE 27 inch THUNDERBOLT DISPLAY",
+      "show_room": "Jamuna iCenter",
+      "stock": "1",
+      "type": "DISPLAYS",
+      "category": "APPLE",
+      "id": "101"
+    },
+    {
+      "name": "MAC MINI 3.6GHZ 8GB/QC/128GB",
+      "show_room": "Jamuna iCenter",
+      "stock": "2",
+      "type": "MAC MINI",
+      "category": "APPLE",
+      "id": "102"
+    },
+    {
+      "name": "MAC MINI 2.6/8GB/1TB",
+      "show_room": "Jamuna iCenter",
+      "stock": "1",
+      "type": "MAC MINI",
+      "category": "APPLE",
+      "id": "103"
+    },
+    {
+      "name": "MAGIC KEYBOARD WITH NUMERIC KEYPAD",
+      "show_room": "Jamuna iCenter",
+      "stock": "3",
+      "type": "KEYBOARD",
+      "category": "MAC ACCESSORIES",
+      "id": "104"
+    },
+    {
+      "name": "APPLE WIRELESS KEYBOARD",
+      "show_room": "Jamuna iCenter",
+      "stock": "2",
+      "type": "KEYBOARD",
+      "category": "MAC ACCESSORIES",
+      "id": "105"
+    },
+    {
+      "name": "MAGIC KEYBOARD WITH NUMERIC KEYPAD",
+      "show_room": "Jamuna iCenter",
+      "stock": "3",
+      "type": "MOUSE",
+      "category": "MAC ACCESSORIES",
+      "id": "106"
+    },
+    {
+      "name": "APPLE WIRELESS KEYBOARD",
+      "show_room": "Jamuna iCenter",
+      "stock": "2",
+      "type": "MOUSE",
+      "category": "MAC ACCESSORIES",
+      "id": "107"
+    }
+  ]
+}

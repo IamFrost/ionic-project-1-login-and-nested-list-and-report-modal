@@ -1,0 +1,84 @@
+<ion-header>
+  <!-- new color declared in variable.css -->
+  <ion-toolbar color="modaltoolbar1" class="ion-text-center">
+    <ion-title style="color : white;">Stock</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)=dismiss()>
+        <ion-icon name="close" style="color : white;" slot="icon-only">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid *ngIf="selectedNames" class="ion-margin-start ion-margin-end">
+
+    <div class="ion-margin-vertical">
+
+    </div>
+    <ion-label style="font-weight: bold;">Item Name: {{this.selectedType}}</ion-label>
+    <div class="ion-margin-vertical">
+  
+    </div>
+
+    <ion-row style="border-bottom: groove; border-top: groove;">
+      <ion-col style="border-left: groove; border-right: groove;" class="ion-text-center" size="1">
+        <div style="font-weight: bold; font-size: 12px">
+          SL#
+        </div>
+      </ion-col>
+      <ion-col style="border-right: groove;" class="ion-text-left" size="6">
+        <div style="font-weight: bold; font-size: 12px" >
+          Name
+        </div>
+      </ion-col>
+      <ion-col style="border-right: groove;" class="ion-text-left" size="3">
+        <div style="font-weight: bold; font-size: 12px;">
+          Show Room
+        </div>
+      </ion-col>
+      <ion-col style="border-right: groove;" class="ion-text-center" size="2">
+        <div style="font-weight: bold; font-size: 12px">
+          Stock
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of selectedNames; index as i" style="border-bottom: groove;">
+      <ion-col style="border-left: groove; border-right: groove;" class="ion-text-center" size="1">
+        <div style="font-size: 11px;">
+          {{i+1}}
+          <!-- i starts from 0, so make it from i+1 if u start from 1-->
+          <!-- {{item.id}} -->
+          <!-- {{i}} -->
+        </div>
+      </ion-col>
+      <ion-col style="border-right: groove;" size="6">
+        <div style="font-size: 11px;">
+          {{item.name}}
+        </div>
+      </ion-col>
+      <ion-col style="border-right: groove;" size="3">
+        <div style="font-size: 11px;">
+          {{item.show_room}}
+        </div>
+      </ion-col>
+      <ion-col style="border-right: groove;" class="ion-text-center" size="2">
+        <div style="font-size: 11px;">
+          {{item.stock}}
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <div class="ion-margin-vertical">
+
+    </div>
+    <ion-button (click)=dismiss() color="danger" class="ion-float-right">
+      Close
+    </ion-button>
+  </ion-grid>
+
+
+
+  
+</ion-content>

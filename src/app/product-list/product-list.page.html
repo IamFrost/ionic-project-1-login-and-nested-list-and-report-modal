@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Stock</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+
+
+            <ion-row>
+              <ion-col>
+                <ion-buttons>
+                  <ion-button color="none" class="ion-float-left" size="small" disabled="true" fill="clear">
+                    <ion-text class="ion-float-left no-padding no-margin"
+                      style="color: black; font-size: 12px; font-weight: bold;">Selected:</ion-text>
+                  </ion-button>
+                  <ion-button color="none" size="small" disabled="true" fill="clear">
+                    <ion-text style="color: black; font-size: 12px; font-weight: bold;">{{selectedType}}</ion-text>
+                  </ion-button>
+                </ion-buttons>
+              </ion-col>
+              <ion-col>
+
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="background1">
+              <ion-col>
+                <!-- <ion-text class="ion-float-left no-padding no-margin" style="font-size: 12px; font-weight: bold;">Item Name</ion-text> -->
+                <!-- <div style="color: white; background-color: blue; font-size: 12px; font-weight: bold;">Item Name</div> -->
+                <!-- <p>Item Name</p> -->
+                <ion-button color="none" class="ion-float-left" size="small" disabled="true" fill="clear">
+                  <ion-text class="ion-float-left no-padding no-margin"
+                    style="color: black; font-size: 12px; font-weight: bold;">Item Name</ion-text>
+                </ion-button>
+              </ion-col>
+              <ion-col>
+                <!-- <div style="color: brown; background-color: brown;">k</div> -->
+                <!-- <ion-button (click)=onBackButtonPressed() [disabled]="disabled" color="secondary" class="ion-float-right" size="small"></ion-button> -->
+                <ion-button (click)=onBackButtonPressed() color="secondary" class="ion-float-right" size="small">
+                  Back
+                </ion-button>
+
+              </ion-col>
+            </ion-row>
+
+            <ion-list *ngIf="currentList">
+              <ion-item *ngFor="let item of currentList" (click)="setIonList(item)">
+                {{item}}
+              </ion-item>
+            </ion-list>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

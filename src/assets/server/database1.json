@@ -1,0 +1,63 @@
+{
+    "products":[
+        {
+            "APPLE":[
+                {
+                    "DISPLAYS":[
+                        {
+                            "name":"APPLE 27 inch THUNDERBOLT DISPLAY",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"1"
+                        }
+                    ]
+                },
+                {
+                    "MAC MINI":[
+                        {
+                            "name":"MAC MINI 3.6GHZ 8GB/QC/128GB",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"2"
+                        },
+                        {
+                            "name":"MAC MINI 2.6/8GB/1TB",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"1"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "MAC ACCESSORIES":[
+                {
+                    "KEYBOARD":[
+                        {
+                            "name":"MAGIC KEYBOARD WITH NUMERIC KEYPAD",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"3"
+                        },
+                        {
+                            "name":"APPLE WIRELESS KEYBOARD",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"2"
+                        }
+                    ]
+                },
+                {
+                    "MOUSE":[
+                        {
+                            "name":"MAGIC KEYBOARD WITH NUMERIC KEYPAD",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"3"
+                        },
+                        {
+                            "name":"APPLE WIRELESS KEYBOARD",
+                            "show_room":"Jamuna iCenter",
+                            "stock":"2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

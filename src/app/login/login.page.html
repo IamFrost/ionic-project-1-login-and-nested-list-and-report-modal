@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+
+            <ion-item>
+              <ion-input type="text" placeholder="User Name / Email" [(ngModel)]="id"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-checkbox color="secondary" checked slot="start"></ion-checkbox>
+              <ion-label class="ion-margin-left">Remember me</ion-label>
+            </ion-item>
+            <!-- <ion-item class="ion-margin-vertical"> -->
+              <!-- <ion-grid>
+                <ion-row>
+                  <ion-col size-lg="4" size-md="4" size-sm="6" size="12">
+                    <ion-item>
+                      <ion-button fill="solid"  size="small" color="tertiary" style="text-transform: none;">Sign up</ion-button>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size-lg="4" size-md="4" size-sm="6" size="12">
+                    <ion-item>
+                      <ion-button fill="solid"  size="small" color="secondary"
+                      (click)="GetALogin()" style="text-transform: none;">Login</ion-button>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col size-lg="4" size-md="4" size-sm="6" size="12">
+                    <ion-item>
+                      <ion-text class="text-align: center">Forget password?</ion-text>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid> -->
+              <div class="outerbox ion-margin-vertical">
+                <ion-button color="tertiary" size="small" (click)="forwardToNextPage1()">Sign Up</ion-button>
+                <ion-button color="primary" size="small" (click)="GetALogin()">Login</ion-button>
+                <ion-button color="secondary" size="small" (click)="forwardToNextPage2()">Forgot Password?</ion-button>
+              </div>
+            <!-- </ion-item> -->
+
+         
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
