@@ -1,183 +1,55 @@
-<form>
-  <ion-grid>
-    <ion-row>
+<div style="height: 100%; display: flex; align-items: center; justify-content: center; background-color: #44739d; ">
 
-      <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Username</ion-label>
-          <ion-input [(ngModel)]="username1" [ngModelOptions]="{standalone: true}"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" [(ngModel)]="email1" [ngModelOptions]="{standalone: true}"></ion-input>
-        </ion-item>
-      </ion-col>
+  <ion-card style="width: 50%; height: max-content; " >
+    <ion-card-content>
+      <!-- <form> -->
+        <ion-grid>
+          <ion-row>
+  
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input [(ngModel)]="username1" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" [(ngModel)]="email1" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+            </ion-col>
+  
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="password" [(ngModel)]="password1" [ngModelOptions]="{standalone: true}"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col size="12">
+              <ion-item>
+                <ion-label position="floating">Confirm Password</ion-label>
+                <ion-input type="password" [(ngModel)]="confirmPassword1" [ngModelOptions]="{standalone: true}">
+                </ion-input>
+              </ion-item>
+            </ion-col>
+  
+            <ion-col>
+              <div class="ion-text-right" line="none">
+                <ion-button (click)="CreateALogin()">
+                  <!-- <ion-icon slot="start" name="add"></ion-icon> -->
+                  Sign up
+                </ion-button>
+              </div>
+            </ion-col>
+  
+          </ion-row>
 
-      <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" [(ngModel)]="password1" [ngModelOptions]="{standalone: true}"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Confirm Password</ion-label>
-          <ion-input type="password" [(ngModel)]="confirmPassword1" [ngModelOptions]="{standalone: true}"></ion-input>
-        </ion-item>
-      </ion-col>
+          
+        </ion-grid>
+      <!-- </form> -->
+    </ion-card-content>
+  </ion-card>
 
-      <ion-col >
-        <ion-item>
-          <ion-button (click)="CreateALogin()">
-            <!-- <ion-icon slot="start" name="add"></ion-icon> -->
-            Sign up
-          </ion-button>
-        </ion-item>
-      </ion-col>
-      <!-- <ion-col size-lg="6" size-md="6" size-sm="12" size="12">
-        <ion-item>
-          <ion-button>Reset</ion-button>
-        </ion-item>
-      </ion-col> -->
 
-      <!-- <ion-col size-lg="4" size-md="4" size-sm="6" size="12">
-        <ion-item>
-          <ion-label position="floating">First Name</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="6" size="12">
-        <ion-item>
-          <ion-label position="floating">Middle Name</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="6" size="12">
-        <ion-item>
-          <ion-label position="floating">Last Name</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col>
+</div>
 
-      <ion-col size-lg="6" size-md="6" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Address Line 1</ion-label>
-          <ion-textarea></ion-textarea>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="6" size-md="6" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Address Line 2</ion-label>
-          <ion-textarea></ion-textarea>
-        </ion-item>
-      </ion-col>
-
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">City</ion-label>
-          <ion-select value="newyork" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="newyork">New York</ion-select-option>
-            <ion-select-option value="tokyo">Tokyo</ion-select-option>
-            <ion-select-option value="london">London</ion-select-option>
-            <ion-select-option value="newdelhi">New Delhi</ion-select-option>
-            <ion-select-option value="jakarta">Jakarta</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-            <ion-label position="floating">Country</ion-label>
-            <ion-select value="usa" okText="Okay" cancelText="Dismiss">
-              <ion-select-option value="usa">United States</ion-select-option>
-              <ion-select-option value="japan">Japan</ion-select-option>
-              <ion-select-option value="uk">United Kingdom</ion-select-option>
-              <ion-select-option value="india">India</ion-select-option>
-              <ion-select-option value="indonesia">Indonesia</ion-select-option>
-            </ion-select>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Post Code</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col> -->
-
-      <!-- <ion-col size-lg="3" size-md="3" size-sm="3" size="12">
-        <ion-item>
-          <ion-label position="floating">Gender</ion-label>
-          <ion-select value="male" okText="Okay" cancelText="Dismiss">
-            <ion-select-option value="male">Male</ion-select-option>
-            <ion-select-option value="female">female</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="3" size-md="3" size-sm="3" size="12">
-        <ion-item>
-          <ion-label position="floating">Age</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="3" size-md="3" size-sm="3" size="12">
-        <ion-item>
-          <ion-label position="floating">Height</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="3" size-md="3" size-sm="3" size="12">
-        <ion-item>
-          <ion-label position="floating">Weight</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-      </ion-col>
-
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Occupation</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Position</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Company</ion-label>
-          <ion-input type="text"></ion-input>
-        </ion-item>
-      </ion-col>
-
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Basic Salary</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Meal</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size-lg="4" size-md="4" size-sm="4" size="12">
-        <ion-item>
-          <ion-label position="floating">Transport</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-      </ion-col>
-
-      <ion-col size-lg="12" size-md="12" size-sm="12" size="12">
-        <ion-item>
-          <ion-label position="floating">Notes</ion-label>
-          <ion-textarea></ion-textarea>
-        </ion-item>
-      </ion-col> -->
-
-    </ion-row>
-  </ion-grid>
-</form>

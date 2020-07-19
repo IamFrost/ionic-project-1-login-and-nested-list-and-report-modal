@@ -14,7 +14,9 @@
 <ion-content>
   <ion-grid *ngIf="this.errorText" class="ion-margin-start ion-margin-end">
 
-    <ion-label style="font-weight: bold;"> {{this.errorText}}</ion-label>
+    <div class="ion-text-center">
+      <ion-text  style="font-weight: bold; "> {{this.errorText}}</ion-text>
+    </div>
     <br>
     <ion-button (click)=dismiss() color="danger" class="ion-float-right ion-margin-vertical">
       Close

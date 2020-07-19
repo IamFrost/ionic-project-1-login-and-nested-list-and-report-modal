@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'select-branch-fyear',
+    redirectTo: 'signup',
     pathMatch: 'full'
   },
   {
@@ -34,6 +34,14 @@ const routes: Routes = [
   {
     path: 'login-modal-one',
     loadChildren: () => import('./login-modal-one/login-modal-one.module').then( m => m.LoginModalOnePageModule)
+  },
+  {
+    path: 'test1',
+    loadChildren: () => import('./test1/test1.module').then( m => m.Test1PageModule)
+  },
+  {
+    path: 'test2',
+    loadChildren: () => import('./test2/test2.module').then( m => m.Test2PageModule)
   }
 ];
 
