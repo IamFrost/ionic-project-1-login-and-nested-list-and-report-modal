@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'select-branch-fyear',
     pathMatch: 'full'
   },
   {
@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'reset-password-one',
     loadChildren: () => import('./reset-password-one/reset-password-one.module').then( m => m.ResetPasswordOnePageModule)
+  },
+  {
+    path: 'select-branch-fyear',
+    loadChildren: () => import('./select-branch-fyear/select-branch-fyear.module').then( m => m.SelectBranchFyearPageModule)
   }
 ];
 

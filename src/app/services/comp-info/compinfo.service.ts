@@ -5,22 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class CompinfoService {
 
-  PROTOCOL = 'http'
+  PROTOCOL = 'http';
   HOST = 'localhost';
   PORT = '3001';
-  SUBDOMAIN = 'products'
+  SUBDOMAIN = 'compinfo';
 
   // baseURLCompanyInfo = 'http://localhost:3001/products';
   // baseURLCompanyInfoWithSlash = 'http://localhost:3001/products' + '/';
-  baseURLCompanyInfo = this.PROTOCOL + '://' + this.HOST + '/' + this.PORT + '/' + this.SUBDOMAIN;
-  baseURLCompanyInfoWithSlash = this.PROTOCOL + '://' + this.HOST + '/' + this.PORT + '/' + this.SUBDOMAIN + '/';
+  baseURLCompanyInfo = this.PROTOCOL + '://' + this.HOST + ':' + this.PORT + '/' + this.SUBDOMAIN;
+  baseURLCompanyInfoWithSlash = this.PROTOCOL + '://' + this.HOST + ':' + this.PORT + '/' + this.SUBDOMAIN + '/';
 
+
+  companiesInfo;
+  companiesName;
 
 
   //CRUD Functions
 
   GetCompanies() {
-    return fetch((this.baseURLCompanyInfo));
+    // console.log('this is company domain : ' + this.baseURLCompanyInfo);
+    return fetch(('http://localhost:3001/compinfo'));
   }
 
   Get_A_Company(brid: string) {
