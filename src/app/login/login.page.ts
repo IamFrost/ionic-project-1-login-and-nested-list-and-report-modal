@@ -54,11 +54,12 @@ export class LoginPage implements OnInit {
       console.log('Either wrong email and password or you need to sign up');
       if(this.id === ''){
         this.loginMessageService.loginMessage = 'Please enter Username/Email';
+        // this.presentModal();
         this.presentPopover(event);
       }
       else if(this.password === ''){
         this.loginMessageService.loginMessage = 'Please enter password';
-        this.presentModal();
+        this.presentPopover(event);
       }
       
     }
@@ -73,18 +74,18 @@ export class LoginPage implements OnInit {
           console.log('inside first if');
           if (dataService[0]['email'] === this.id && dataService[0]['password'] === this.password) {
             console.log('login ok');
-            this.forwardToNextPage();
+            this.presentPopover(event);
           }
           else {
             console.log('Either wrong email and password or you need to sign up');
             this.loginMessageService.loginMessage = 'Email and password didn\'t match';
-            this.presentModal();
+            this.presentPopover(event);
           }
         }
         else {
           console.log('Either wrong email and password or you need to sign up');
           this.loginMessageService.loginMessage = 'This email is not registered';
-          this.presentModal();
+          this.presentPopover(event);
         }
       }
       else {
@@ -96,18 +97,18 @@ export class LoginPage implements OnInit {
           console.log('inside first if');
           if (dataService[0]['username'] === this.id && dataService[0]['password'] === this.password) {
             console.log('login ok');
-            this.forwardToNextPage();
+            this.presentPopover(event);
           }
           else {
             console.log('Either wrong username and password or you need to sign up');
             this.loginMessageService.loginMessage = 'Username and password didn\'t match';
-            this.presentModal();
+            this.presentPopover(event);
           }
         }
         else {
           console.log('Either wrong username and password or you need to sign up');
           this.loginMessageService.loginMessage = 'This username is not registered';
-          this.presentModal();
+          this.presentPopover(event);
         }
       }
       // this.purchases = dataService;
