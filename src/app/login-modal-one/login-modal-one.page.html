@@ -1,0 +1,27 @@
+<ion-header>
+  <!-- new color declared in variable.css -->
+  <ion-toolbar color="modaltoolbar1" class="ion-text-center">
+    <ion-title style="color : white;">Stock</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)=dismiss()>
+        <ion-icon name="close" style="color : white;" slot="icon-only">
+        </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid *ngIf="this.errorText" class="ion-margin-start ion-margin-end">
+
+  <ion-label style="font-weight: bold;"> {{this.errorText}}</ion-label>
+  <br>
+  <ion-button (click)=dismiss() color="danger" class="ion-float-right ion-margin-vertical">
+    Close
+  </ion-button>
+</ion-grid>
+
+
+
+
+</ion-content>

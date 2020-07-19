@@ -48,7 +48,7 @@ export class SelectBranchFyearPage implements OnInit {
       yearsDescription.push(element.description);
     });
     this.yearinfoService.yearsDescription = yearsDescription;
-    this.allCompaniesName = yearsDescription;
+    this.allYearsDescription = yearsDescription;
 
     // console.log('this is dataService array : ' +  dataService);
   }

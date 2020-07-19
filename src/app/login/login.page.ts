@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
+import { LoginModalOnePage } from '../login-modal-one/login-modal-one.page';
+import { LoginMessageService } from '../services/login-message/login-message.service';
+
+import { PopoverController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,22 +14,53 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+
   id = '';
   password = '';
   rememberMeText = 'Remember me';
+  loginErrorText = 'hi';
 
   constructor(private dataService: DataService,
-    private router: Router) {
+    private router: Router, private modalController: ModalController, 
+    private loginMessageService: LoginMessageService, private popoverController: PopoverController) {
+      // loginMessageService.loginMessage = this.loginErrorText;
 
   }
 
   ngOnInit() {
   }
 
+  async presentPopover(ev: any) {
+    const popover = await this.popoverController.create({
+      component: LoginModalOnePage,
+      cssClass: 'my-custom-class',
+      event: ev,
+      translucent: true
+    });
+    return await popover.present();
+  }
+
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: LoginModalOnePage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
+  }
+
   async GetALogin() {
 
     if (this.id === '' || this.password === '') {
       console.log('Either wrong email and password or you need to sign up');
+      if(this.id === ''){
+        this.loginMessageService.loginMessage = 'Please enter Username/Email';
+        this.presentPopover(event);
+      }
+      else if(this.password === ''){
+        this.loginMessageService.loginMessage = 'Please enter password';
+        this.presentModal();
+      }
+      
     }
     else {
 
@@ -41,10 +77,14 @@ export class LoginPage implements OnInit {
           }
           else {
             console.log('Either wrong email and password or you need to sign up');
+            this.loginMessageService.loginMessage = 'Email and password didn\'t match';
+            this.presentModal();
           }
         }
         else {
           console.log('Either wrong email and password or you need to sign up');
+          this.loginMessageService.loginMessage = 'This email is not registered';
+          this.presentModal();
         }
       }
       else {
@@ -60,10 +100,14 @@ export class LoginPage implements OnInit {
           }
           else {
             console.log('Either wrong username and password or you need to sign up');
+            this.loginMessageService.loginMessage = 'Username and password didn\'t match';
+            this.presentModal();
           }
         }
         else {
           console.log('Either wrong username and password or you need to sign up');
+          this.loginMessageService.loginMessage = 'This username is not registered';
+          this.presentModal();
         }
       }
       // this.purchases = dataService;

@@ -5,34 +5,26 @@
 </ion-header>
 
 <ion-content>
-  <!-- <h1 style="text-align: center;">Satcom Inventory Management System</h1>
-  <h3 style="text-align: center;">Select Branch Name</h3> -->
+  <h1 style="text-align: center;">X Inventory Management System</h1>
+  <h3 style="text-align: center;">Select Branch Name</h3>
   <ion-list>
     <ion-item>
       <ion-label>Operating System</ion-label>
       <ion-select ok-text="Okay" cancel-text="Nah">
-        <ion-select-option value="dos">DOS</ion-select-option>
-        <ion-select-option value="lunix">Linux</ion-select-option>
-        <ion-select-option value="mac7">Mac OS 7</ion-select-option>
-        <ion-select-option value="mac8">Mac OS 8</ion-select-option>
-        <ion-select-option value="win3.1">Windows 3.1</ion-select-option>
-        <ion-select-option value="win95">Windows 95</ion-select-option>
-        <ion-select-option value="win98">Windows 98</ion-select-option>
+        <div *ngFor="let companyName of allCompaniesName">
+          <ion-select-option value={{companyName}}>{{companyName}}</ion-select-option>
+        </div>
       </ion-select>
     </ion-item>
   </ion-list>
-  <!-- <h5 style="text-align: center;">Select Financial Year</h5> -->
+  <h5 style="text-align: center;">Select Financial Year</h5>
   <ion-list>
     <ion-item>
       <ion-label>Operating System</ion-label>
-      <ion-select ok-text="Okay" cancel-text="Nah">
-        <ion-select-option value="dos">DOS</ion-select-option>
-        <ion-select-option value="lunix">Linux</ion-select-option>
-        <ion-select-option value="mac7">Mac OS 7</ion-select-option>
-        <ion-select-option value="mac8">Mac OS 8</ion-select-option>
-        <ion-select-option value="win3.1">Windows 3.1</ion-select-option>
-        <ion-select-option value="win95">Windows 95</ion-select-option>
-        <ion-select-option value="win98">Windows 98</ion-select-option>
+      <ion-select ok-text="Okay" cancel-text="Nah" fullscreen>
+        <div *ngFor="let yearDescription of allYearsDescription">
+          <ion-select-option value={{yearDescription}}>{{yearDescription}}</ion-select-option>
+        </div>
       </ion-select>
     </ion-item>
   </ion-list>

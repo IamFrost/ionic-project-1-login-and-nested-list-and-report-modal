@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'select-branch-fyear',
     loadChildren: () => import('./select-branch-fyear/select-branch-fyear.module').then( m => m.SelectBranchFyearPageModule)
+  },
+  {
+    path: 'login-modal-one',
+    loadChildren: () => import('./login-modal-one/login-modal-one.module').then( m => m.LoginModalOnePageModule)
   }
 ];
 
